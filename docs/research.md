@@ -29,6 +29,7 @@ go in ADRs, which can link back to these notes.
 ### Device
 - Development phone: Samsung Galaxy A15 (Android 14).
 - Samsung's battery optimization ("sleeping apps") is known to kill background services. That makes it the top risk (Spike A).
+- My current setup (MacroDroid, one NTAG215 tag next to the bathroom mirror, TikTok and Opera blocked, apps relock 6h after the last scan) has blocked apps reliably on this phone. So blocking is doable on the A15, though it still needs to be proven in my own code.
 - The app should target a wide range of Android versions. Choose `minSdk` in Phase 4 using Android Studio's distribution data.
 
 ## Architecture
@@ -80,4 +81,5 @@ go in ADRs, which can link back to these notes.
 - **Name.** Decided 2026-10-03: **Déclic** ("Declic" in the repo, package and store). Shortlist was Keystone and Déclic.
   - *Checked 2026-10-03:* "Keystone – Habits & AI Planner" is on Google Play, and "Keystone – Social Habit Tracker" exists too. Both are habit apps, so the name collides directly.
   - "Declic" exists as a social meetup app on both stores. That's a different category. Before any commercial launch, check French trademarks (INPI) and EU trademarks (EUIPO).
+- **A scan is not always a completed habit.** With the 6h relock, I sometimes scan midday just to unlock, without doing the routine. If every scan counted as "skincare done", the stats would lie. Unlocking and completing a habit need to be separate things. To settle in Phase 1/3.
 - **Habit types.** The app covers many habits with different shapes: daily (skincare), weekly frequency (gym 3×/week), measurable (10 km run), time-bound (bedtime). NFC proof fits place-bound habits. Other habits need other kinds of proof, to be explored in Phase 1.

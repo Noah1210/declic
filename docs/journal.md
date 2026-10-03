@@ -12,4 +12,5 @@ material for the case study.
 - Named it **Déclic**. Keystone was the other favorite, but two habit apps already use it.
 - Repo is public with no license: readable by recruiters, all rights reserved in case I sell it later.
 - Docs in English, the working language of the field. The app UI can be bilingual.
+- Wrote the vision. Main realization: when the 6h lock hits midday, I scan just to unlock without doing my routine. So a scan and a finished habit can't be the same thing in the app, or the stats would lie.
 - Researched the architect role and the platform. Notes in `research.md`, plan in `ROADMAP.md`.

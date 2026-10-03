@@ -11,6 +11,7 @@ habit happens, like a sticker next to your skincare.
 
 ## Documentation
 
+- [Vision](docs/vision.md): the problem and the idea
 - [Roadmap](docs/ROADMAP.md): phases and current progress
 - [Research notes](docs/research.md): findings that shape the design
 - [Journal](docs/journal.md): dated log of decisions and progress

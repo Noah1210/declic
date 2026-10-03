@@ -11,8 +11,8 @@ risk is. Simple beats complex.
 - [x] Create the GitHub repository and start committing the planning work
 - [x] Choose the project name: Déclic
 - [x] Choose a license: none for now (all rights reserved, code public and readable)
-- [ ] Vision: one paragraph covering the problem, who it's for, and why it differs from existing apps
-- [ ] Non-goals for v1: no iOS, no accounts, no social features. Backend is deferred, not ruled out.
+- [x] Vision: the problem, who it's for, and why it differs from existing apps
+- [x] Non-goals for v1: no iOS, no accounts, no social features. Backend is deferred, not ruled out.
 - Deliverable: `docs/vision.md`
 
 ## Phase 1: Requirements
