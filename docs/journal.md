@@ -13,4 +13,6 @@ material for the case study.
 - Repo is public with no license: readable by recruiters, all rights reserved in case I sell it later.
 - Docs in English, the working language of the field. The app UI can be bilingual.
 - Wrote the vision. Main realization: when the 6h lock hits midday, I scan just to unlock without doing my routine. So a scan and a finished habit can't be the same thing in the app, or the stats would lie.
+- Read up on habit science. The part that clicked: doing the habit is rarely the hard part, getting there is. Déclic is about getting you to the mirror, not about the skincare.
+- Goal for later: once the minimum flow works, "work on Déclic" becomes one of my habits in Déclic.
 - Researched the architect role and the platform. Notes in `research.md`, plan in `ROADMAP.md`.

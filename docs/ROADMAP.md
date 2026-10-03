@@ -17,11 +17,11 @@ risk is. Simple beats complex.
 
 ## Phase 1: Requirements
 
-- [ ] User stories for the core loop: create a habit -> link an NFC tag -> choose apps to block -> apps lock -> scan tag -> apps unlock -> daily reset
-- [ ] Prioritize with MoSCoW and freeze the v1 scope
-- [ ] Rank quality attributes (proposal: blocking reliability > privacy > battery > maintainability)
-- [ ] Constraints: Windows dev machine, Android first, solo developer, no Mac
-- [ ] Safety requirement: an emergency unlock always exists
+- [x] User stories for the core loop: create a habit -> link an NFC tag -> choose apps to block -> apps lock -> scan tag -> apps unlock -> daily reset
+- [x] Prioritize with MoSCoW and freeze the v1 scope
+- [x] Rank quality attributes (proposal: blocking reliability > privacy > battery > maintainability)
+- [x] Constraints: Windows dev machine, Android first, solo developer, no Mac
+- [x] Safety requirement: an emergency unlock always exists
 - Deliverable: `docs/requirements.md`
 
 ## Phase 2: Risks and spikes

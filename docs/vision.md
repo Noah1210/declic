@@ -26,7 +26,9 @@ this physical: you put a tag next to your bathroom mirror, and you have to get u
 and scan it. Once you're standing there, doing the routine is the easy part.
 
 The tag doesn't prove you did the habit. It puts you where the habit happens,
-and that turns out to be enough.
+and that turns out to be enough. Doing the thing is rarely the hard part. Working
+out isn't hard once you're in the gym, and skincare isn't hard once you're at the
+mirror. The hard part is getting there. That's the part Déclic forces.
 
 It's also a real habit tracker, with history, streaks and stats, because the
 blocking alone isn't enough. You want to see the progress.

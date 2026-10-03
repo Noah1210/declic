@@ -12,6 +12,8 @@ habit happens, like a sticker next to your skincare.
 ## Documentation
 
 - [Vision](docs/vision.md): the problem and the idea
+- [Requirements](docs/requirements.md): what v1 does and doesn't do
+- [Habit research](docs/habit-research.md): what the science says, and what other apps do
 - [Roadmap](docs/ROADMAP.md): phases and current progress
 - [Research notes](docs/research.md): findings that shape the design
 - [Journal](docs/journal.md): dated log of decisions and progress
