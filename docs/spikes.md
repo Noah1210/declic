@@ -79,3 +79,27 @@ apps and Samsung's own apps. The list appeared without a noticeable wait.
 those aren't apps anyone opens to scroll.
 
 **Decision:** go. The app picker uses a launcher-intent query.
+
+## Spike D: lock screen as an overlay (in progress)
+
+*2026-10-04, Galaxy A15, Android 15*
+
+Instead of starting an activity, the accessibility service draws the lock screen
+itself with `WindowManager.addView` and `TYPE_ACCESSIBILITY_OVERLAY`. A switch in
+the spike flips between the two modes.
+
+What I saw so far, with TikTok:
+
+- Faster than the activity. On a cold start the overlay is up before TikTok finishes loading. On a warm start TikTok is still visible for about half a second, which is how long Android takes to tell the service. That part can't be fixed with either approach.
+- `show()` itself takes 100 to 160 ms because the views get rebuilt every time. Building them once should help.
+- First version left a strip under the camera notch where TikTok showed through. Fixed with `LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS`.
+- "Go home" flashed TikTok because the overlay was removed before going home. Now it only goes home and the overlay hides when the launcher shows up.
+- It covered the nav bar, so the only way out was our own buttons. Not ok. `fitInsetsTypes` is ignored for this window type, so the height is now computed by hand to stop above the nav bar.
+- Then the nav bar was visible but dead: the window was touch modal and ate every touch on the screen. Fixed with `FLAG_NOT_TOUCH_MODAL`.
+- Pulling the notification shade opens it under the overlay. Not solved.
+- TikTok keeps running underneath, so its sound plays. Audio focus to test next.
+
+The big difference with the activity: Android pauses the blocked app when an
+activity covers it, but not when an overlay does. That matters more for some
+apps than others (games, calls, picture in picture), so the choice will be made
+with a test matrix across app types, not just TikTok.
