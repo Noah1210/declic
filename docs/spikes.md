@@ -80,7 +80,7 @@ those aren't apps anyone opens to scroll.
 
 **Decision:** go. The app picker uses a launcher-intent query.
 
-## Spike D: lock screen as an overlay (in progress)
+## Spike D: lock screen as an overlay
 
 *2026-10-04, Galaxy A15, Android 15*
 
@@ -97,9 +97,18 @@ What I saw so far, with TikTok:
 - It covered the nav bar, so the only way out was our own buttons. Not ok. `fitInsetsTypes` is ignored for this window type, so the height is now computed by hand to stop above the nav bar.
 - Then the nav bar was visible but dead: the window was touch modal and ate every touch on the screen. Fixed with `FLAG_NOT_TOUCH_MODAL`.
 - Pulling the notification shade opens it under the overlay. Not solved.
-- TikTok keeps running underneath, so its sound plays. Audio focus to test next.
+- TikTok keeps running underneath, so its sound plays.
+- Tried taking audio focus when the overlay shows. Android grants it, but TikTok grabs it right back (probably every time a new video starts) and keeps playing. Audio focus is a convention, nothing forces an app to respect it.
+- Requesting audio focus takes almost 300 ms, and since it ran before `addView` the overlay took 537 ms to show. Slow stuff goes after covering the screen.
+- The overlay also shows on top of the phone's lock screen.
 
 The big difference with the activity: Android pauses the blocked app when an
-activity covers it, but not when an overlay does. That matters more for some
-apps than others (games, calls, picture in picture), so the choice will be made
-with a test matrix across app types, not just TikTok.
+activity covers it, but not when an overlay does. An overlay hides the picture
+while the sound keeps going, which is arguably worse than seeing TikTok for a
+second. A hybrid (overlay, then send the app home behind it) would stop the
+sound about as fast as the activity does, for a lot more state to manage.
+
+**Decision:** no go. The lock screen stays an activity. It's half a second
+slower to cover the app, but the system pauses the blocked app for us, it
+doesn't show over the phone's lock screen, and it's much simpler. The ~1 s can
+be tuned later by making the lock screen lighter to start.
