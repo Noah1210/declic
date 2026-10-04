@@ -19,7 +19,7 @@ risk is. Simple beats complex.
 
 - [x] User stories for the core loop: create a habit -> link an NFC tag -> choose apps to block -> apps lock -> scan tag -> apps unlock -> daily reset
 - [x] Prioritize with MoSCoW and freeze the v1 scope
-- [x] Rank quality attributes (proposal: blocking reliability > privacy > battery > maintainability)
+- [x] Rank quality attributes: blocking reliability > smooth unlock > privacy > battery > maintainability
 - [x] Constraints: Windows dev machine, Android first, solo developer, no Mac
 - [x] Safety requirement: an emergency unlock always exists
 - Deliverable: `docs/requirements.md`
@@ -28,9 +28,11 @@ risk is. Simple beats complex.
 
 Throwaway code to kill the biggest unknowns before committing to a design.
 
-- [ ] Spike A: an AccessibilityService blocks one app on the Galaxy A15 and keeps working after a reboot and under Samsung battery optimization
-- [ ] Spike B: scanning a tag launches the app and identifies which tag it was
-- [ ] Spike C: list launchable installed apps for a picker without `QUERY_ALL_PACKAGES`
+- [x] Spike A: an AccessibilityService blocks one app on the Galaxy A15 by showing a lock screen over it, and keeps working after a reboot and under Samsung battery optimization. Note how long the blocked app is visible before the lock screen appears.
+- [x] Spike B: scanning a tag launches the app and identifies which tag it was
+- [x] Spike C: list launchable installed apps for a picker without `QUERY_ALL_PACKAGES`
+- [ ] Spike A, battery part: still blocking after a night idle
+- [ ] Spike D: draw the lock screen as an overlay from the service to remove the ~1 s delay, and silence the blocked app's audio
 - Deliverable: `docs/spikes.md` with findings and a go/no-go
 
 ## Phase 3: Domain model

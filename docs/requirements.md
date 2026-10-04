@@ -38,7 +38,7 @@ middle of the day without doing the routine shouldn't count as done.
 | L1 | As a user, I want to create a lock by choosing which apps it blocks, so I only block my distractions. | Must |
 | L2 | As a user, I want a lock to come back N hours after my last unlock, so it works without a fixed schedule. | Must |
 | L3 | As a user, I want a lock to come back at fixed times of day, for when I do have a schedule. | Must |
-| L4 | As a user, when I open a blocked app, I want to see which lock is active and how to open it. | Must |
+| L4 | As a user, when I open a blocked app, I want Déclic's lock screen to appear over it, showing which lock is active, with the ways to open it (scan, start the wait timer, emergency). Going back from it takes me home, not into the blocked app. | Must |
 | L5 | As a user, I want to link a lock to one or more habits, so after unlocking, the app asks me about them. The question can be answered later and never blocks the unlock. | Must |
 | L6 | As a user without my tag nearby, I want a wait unlock: I start a timer (5 minutes by default, set per lock), go do the routine, and the apps open when it ends. Once open, they stay open until the next relock, like after a scan. | Must |
 | L7 | As a user, I want a limited instant emergency unlock (default 1 per week), for real emergencies. | Must |
@@ -109,7 +109,7 @@ In order of priority, with how each one gets checked.
 ## Constraints
 
 - Developed on Windows, no Mac
-- Android first, tested on a Samsung Galaxy A15 (Android 14). Supports a wide range of Android versions.
+- Android first, tested on a Samsung Galaxy A15 (Android 15). Supports a wide range of Android versions.
 - Solo developer
 - Blocking relies on Android's AccessibilityService, so Google Play rules apply when it's published.
 

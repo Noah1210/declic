@@ -27,9 +27,9 @@ go in ADRs, which can link back to these notes.
 - A plain NTAG213 sticker can be copied. NTAG 424 DNA tags give signed, rolling-counter scans. This is a possible later feature, not a v1 one.
 
 ### Device
-- Development phone: Samsung Galaxy A15 (Android 14).
+- Development phone: Samsung Galaxy A15 (Android 15).
 - Samsung's battery optimization ("sleeping apps") is known to kill background services. That makes it the top risk (Spike A).
-- My current setup (MacroDroid, one NTAG215 tag next to the bathroom mirror, TikTok and Opera blocked, apps relock 6h after the last scan) has blocked apps reliably on this phone. So blocking is doable on the A15, though it still needs to be proven in my own code.
+- My current setup (MacroDroid, one NTAG215 tag next to the bathroom mirror, TikTok and Opera blocked, apps relock 6h after the last scan) has blocked apps reliably on this phone. I stopped using it on 2026-10-03 when the free trial ran out. So blocking is doable on the A15, though it still needs to be proven in my own code.
 - The app should target a wide range of Android versions. Choose `minSdk` in Phase 4 using Android Studio's distribution data.
 
 ## Architecture
