@@ -40,8 +40,8 @@ middle of the day without doing the routine shouldn't count as done.
 | L3 | As a user, I want a lock to come back at fixed times of day, for when I do have a schedule. | Must |
 | L4 | As a user, when I open a blocked app, I want Déclic's lock screen to appear over it, showing which lock is active, with the ways to open it (scan, start the wait timer, emergency). Going back from it takes me home, not into the blocked app. | Must |
 | L5 | As a user, I want to link a lock to one or more habits, so after unlocking, the app asks me about them. The question can be answered later and never blocks the unlock. | Must |
-| L6 | As a user without my tag nearby, I want a wait unlock: I start a timer (5 minutes by default, set per lock), go do the routine, and the apps open when it ends. Once open, they stay open until the next relock, like after a scan. | Must |
-| L7 | As a user, I want a limited instant emergency unlock (default 1 per week), for real emergencies. | Must |
+| L6 | As a user with a lock that has no tag (or only lost tags), I want a wait unlock: I start a timer (5 minutes by default, set per lock), go do the routine, and the apps open when it ends, until the next relock. | Must |
+| L7 | As a user, I want a limited emergency unlock (1 per week by default) that opens a lock for 20 minutes, for real emergencies. | Must |
 | L8 | As a user, I want locks to keep working after my phone restarts. | Must |
 | L9 | As a user, I want clear setup screens explaining each permission (accessibility, NFC, battery) and why it's needed. | Must |
 | L10 | As a user, I want changes that loosen a lock to apply only the next day, and to be asked that day if I still want them, so I can't weaken a lock in a weak moment. | Should |
@@ -115,6 +115,8 @@ In order of priority, with how each one gets checked.
 
 ## Decided
 
-- A wait unlock takes 5 minutes by default and opens the apps until the next relock.
+- A wait unlock takes 5 minutes by default and opens the apps until the next relock. It's only for locks without an active tag.
+- An emergency unlock lasts 20 minutes.
+- Exact rules are in [domain.md](domain.md).
 - Habits can be logged up to 24 hours late.
 - A lost tag switches its locks to wait unlock until it's replaced.

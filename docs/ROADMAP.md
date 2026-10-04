@@ -37,9 +37,9 @@ Throwaway code to kill the biggest unknowns before committing to a design.
 
 ## Phase 3: Domain model
 
-- [ ] Entities: Habit, Tag, BlockedApp, Completion, Schedule
-- [ ] State diagram: Locked -> (right tag scanned) -> Unlocked -> (new day) -> Locked, plus the emergency path
-- [ ] Glossary: one word per concept, used everywhere in code and docs
+- [x] Entities: Habit, Completion, Lock, Tag, Unlock, StreakRestore
+- [x] State diagram: Locked, Waiting, Open, with tag, wait and emergency unlocks
+- [x] Glossary: one word per concept, used everywhere in code and docs
 - Deliverable: `docs/domain.md`
 
 ## Phase 4: Architecture
