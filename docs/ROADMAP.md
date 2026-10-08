@@ -31,8 +31,8 @@ Throwaway code to kill the biggest unknowns before committing to a design.
 - [x] Spike A: an AccessibilityService blocks one app on the Galaxy A15 by showing a lock screen over it, and keeps working after a reboot and under Samsung battery optimization. Note how long the blocked app is visible before the lock screen appears.
 - [x] Spike B: scanning a tag launches the app and identifies which tag it was
 - [x] Spike C: list launchable installed apps for a picker without `QUERY_ALL_PACKAGES`
-- [ ] Spike A, battery part: still blocking after a night idle
-- [ ] Spike D: draw the lock screen as an overlay from the service to remove the ~1 s delay, and silence the blocked app's audio
+- [x] Spike A, battery part: still blocking after a night idle
+- [x] Spike D: draw the lock screen as an overlay from the service to remove the ~1 s delay, and silence the blocked app's audio
 - Deliverable: `docs/spikes.md` with findings and a go/no-go
 
 ## Phase 3: Domain model

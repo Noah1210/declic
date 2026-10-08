@@ -20,7 +20,7 @@ minute, and a "go home" button. Back also goes home.
 | Back / "go home" never lead into TikTok | Works |
 | Unlock, then relock while staying inside TikTok | Works |
 | Still blocking after a restart, without opening the app | Works (the service reconnects on its own) |
-| Still blocking after hours idle (Samsung battery optimization) | Pending, overnight test |
+| Still blocking after hours idle (Samsung battery optimization) | Works. Blocked the calculator for several days and nights without opening the app. |
 
 **Delay.** From the moment Android reports TikTok in front to the lock screen
 being visible: 131 ms at best, usually around 800 ms to 1 s. On a cold start,
